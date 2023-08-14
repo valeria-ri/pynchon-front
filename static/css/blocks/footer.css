@@ -12,9 +12,6 @@
 }
 
 .footer__copyright {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 160%;
   margin: 0;
   padding: 0;
 }
@@ -22,9 +19,11 @@
 .footer__link {
   text-decoration: none;
   color: #1B1B1B;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 160%;
   margin: 0 auto;
   padding: 0;
+  transition: border 100ms ease;
+}
+
+.footer__link:hover {
+  border-bottom: 1px solid #1B1B1B;
 }

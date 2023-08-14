@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Проект Пинчон вики">
+  <meta name="keywords" content="Пинчон, Томас Пинчон, Радуга тяготения">
+  <meta name="author" content="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script defer src="./static/js/index.js"></script>
+  <title>Пинчонвики</title>
+</head>
+
+<body class="page">
+
+  <!-- компонент хедера -->
+  <header class="header">
+    <a class="header__logo-link" href="index.html" target="_self">
+      <img class="header__logo" src="./static/img/logo.png" alt="лого">
+    </a>
+    <ul class="header__links">
+      <li class="header__item"><a class="header__link link body-text-l" href="author.html" target="_self">Томас Пинчон</a></li>
+      <li class="header__item"><a class="header__link link body-text-l" href="about-project.html" target="_self">О Проекте</a></li>
+      <li class="header__item"><a class="header__link link body-text-l" href="other-books.html" target="_self">Другие Книги</a></li>
+    </ul>
+  </header>
+
+  <!-- контент страницы третьего раздела -->
+  <main class="content">
+
+    <!-- общая для разделов структура навигации -->
+    <section class="chapters-nav">
+      <form class="search">
+        <input class="search__input" type="text" name="search" id="search" placeholder="Поиск">
+        <button class="search__button" type="button"></button>
+      </form>
+      <ul class="chapters-nav__list">
+        <li class="chapters-nav__item">
+          <a class="chapters-nav__link" href="chapter1.html">
+            <h1 class="chapters-nav__chapter">Раздел 1</h1>
+            <h2 class="chapters-nav__name">Как перестать беспокоиться и начать читать роман</h2>
+          </a>
+        </li>
+        <li class="chapters-nav__item">
+          <a class="chapters-nav__link" href="chapter2.html">
+            <h1 class="chapters-nav__chapter">Раздел 2</h1>
+            <h2 class="chapters-nav__name">примечания</h2>
+          </a>
+        </li>
+        <li class="chapters-nav__item chapters-nav__item_active">
+          <a class="chapters-nav__link" href="chapter3.html">
+            <h1 class="chapters-nav__chapter">Раздел 3</h1>
+            <h2 class="chapters-nav__name">Комментарии</h2>
+          </a>
+        </li>
+        <li class="chapters-nav__item">
+          <a class="chapters-nav__link" href="chapter4.html">
+            <h1 class="chapters-nav__chapter">Раздел 4</h1>
+            <h2 class="chapters-nav__name">KEZVH</h2>
+          </a>
+        </li>
+        <li class="chapters-nav__item">
+          <a class="chapters-nav__link" href="chapter5.html">
+            <h1 class="chapters-nav__chapter">Раздел 5</h1>
+            <h2 class="chapters-nav__name">Хронология</h2>
+          </a>
+        </li>
+        <li class="chapters-nav__item">
+          <a class="chapters-nav__link" href="chapter6.html">
+            <h1 class="chapters-nav__chapter">Раздел 6</h1>
+            <h2 class="chapters-nav__name">Персонажи</h2>
+          </a>
+        </li>
+        <li class="chapters-nav__item">
+          <a class="chapters-nav__link" href="chapter7.html">
+            <h1 class="chapters-nav__chapter">Раздел 7</h1>
+            <h2 class="chapters-nav__name">Как&nbsp;перестать беспокоиться и&nbsp;начать&nbsp;читать роман - 2</h2>
+          </a>
+        </li>
+      </ul>
+      <h1 class="chapters-nav__title chapter-title">Комментарии</h1>
+    </section>
+
+    <!-- секция раздела -->
+    <section class="chapter chapter-2-3-notes">
+      <!-- вёрстка аналогична 2 разделу "примечания" -->
+    </section>
+  </main>
+
+  <!-- компонент футера -->
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__copyright body-text">&copy;&nbsp;
+        <script>document.write(new Date().getFullYear())</script>
+      </p>
+      <a class="footer__link body-text" href="#">Телеграм канал</a>
+    </div>
+  </footer>
+
+  <!-- компонент прокрутки страницы вверх -->
+  <div class="to-top">
+    <p class="to-top__text body-text">В начало</p>
+    <button class="to-top__button" type="button" id="scrollToTopLink"></button>
+  </div>
+
+</body>
+
+</html>

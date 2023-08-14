@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Проект Пинчон вики">
+    <meta name="keywords" content="Пинчон, Томас Пинчон, Радуга тяготения">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script defer src="./static/js/index.js"></script>
+    <title>Пинчонвики</title>
+  </head>
+  <body class="page">
+
+    <!-- компонент хедера -->
+    <header class="header">
+      <a class="header__logo-link" href="index.html" target="_self">
+        <img class="header__logo" src="./static/img/logo.png" alt="лого">
+      </a>
+      <ul class="header__links">      
+        <li class="header__item"><a class="header__link link body-text-l" href="author.html" target="_self">Томас Пинчон</a></li>
+        <li class="header__item"><a class="header__link link body-text-l" href="about-project.html" target="_self">О Проекте</a></li>
+        <li class="header__item"><a class="header__link link body-text-l" href="other-books.html" target="_self">Другие Книги</a></li>
+      </ul>
+    </header>
+
+    <!-- контент страницы о команде проекта -->
+    <main class="content">
+
+      <!-- общая для проекта структура навигации -->
+      <section class="about-nav">
+        <ul class="about-nav__links">
+          <li class="about-nav__link-item">
+            <a class="about-nav__link body-text-l" href="about-project.html">Описание</a>
+          </li>
+          <li class="about-nav__link-item about-nav__link-item_active">
+            <a class="about-nav__link body-text-l" href="creators.html">Авторы</a>
+          </li>
+          <li class="about-nav__link-item">
+            <a class="about-nav__link body-text-l" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+        <h1 class="about-nav__title chapter-title">Кто делает проект</h1>
+      </section>
+
+      <!-- контент о команде проекта -->
+      <section class="about-creators">
+        <ul class="about-creators__list">
+          <li class="about-creators__creator">
+            <img class="about-creators__photo" src="./static/img/creator.jpeg" alt="команда">
+            <h2 class="about-creators__name body-text-l">Имя Фамилия</h2>
+            <p class="about-creators__role body-text-bold">Роль в проекте</p>
+          </li>
+          <li class="about-creators__creator">
+            <img class="about-creators__photo" src="./static/img/creator.jpeg" alt="команда">
+            <h2 class="about-creators__name body-text-l">Имя Фамилия</h2>
+            <p class="about-creators__role body-text-bold">Роль в проекте</p>
+          </li>
+          <li class="about-creators__creator">
+            <img class="about-creators__photo" src="./static/img/creator.jpeg" alt="команда">
+            <h2 class="about-creators__name body-text-l">Имя Фамилия</h2>
+            <p class="about-creators__role body-text-bold">Роль в проекте</p>
+          </li>
+          <li class="about-creators__creator">
+            <img class="about-creators__photo" src="./static/img/creator.jpeg" alt="команда">
+            <h2 class="about-creators__name body-text-l">Имя Фамилия</h2>
+            <p class="about-creators__role body-text-bold">Роль в проекте</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- компонент футера -->
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__copyright body-text">&copy;&nbsp;<script>document.write(new Date().getFullYear())</script></p>
+        <a class="footer__link body-text" href="#">Телеграм канал</a>
+      </div>
+    </footer>
+
+    <!-- компонент прокрутки страницы вверх -->
+    <div class="to-top">
+      <p class="to-top__text body-text">В начало</p>
+      <button class="to-top__button" type="button" id="scrollToTopLink"></button>
+    </div>
+    
+  </body>
+</html>
