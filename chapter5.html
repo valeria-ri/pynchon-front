@@ -7,7 +7,9 @@
   <meta name="description" content="Проект Пинчон вики">
   <meta name="keywords" content="Пинчон, Томас Пинчон, Радуга тяготения">
   <meta name="author" content="">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./static/css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script defer src="./static/js/index.js"></script>
   <script defer src="./static/js/chronology.js"></script>
   <title>Пинчонвики</title>
@@ -86,7 +88,37 @@
 
     <!-- секции раздела -->
     <section class="chronology">
-      <!-- здесь будет слайдер с датами и фактами -->
+
+      <!-- Библиотечный слайдер -->
+      <!-- Активный в данный момент div "swiper-slide..." приобретает класс ".chronology__slide_active" -->
+      <div class="chronology__slider-container">
+        <div class="swiper-button-prev chronology__prev-btn"></div>
+        <div class="swiper chronology__slider">
+          <div class="swiper-wrapper chronology__wrapper">
+            <div class="swiper-slide chronology__slide">
+              <p class="chronology__slide-text">06.01.1945</p>
+            </div>
+            <div class="swiper-slide chronology__slide">
+              <p class="chronology__slide-text">1634-1635</p>
+            </div>
+            <div class="swiper-slide chronology__slide">
+              <p class="chronology__slide-text">Февраль 1945</p>
+            </div>
+            <div class="swiper-slide chronology__slide">
+              <p class="chronology__slide-text">1737-1766</p>
+            </div>
+            <div class="swiper-slide chronology__slide">
+              <p class="chronology__slide-text">1865</p>
+            </div>
+            <div class="swiper-slide chronology__slide">
+              <p class="chronology__slide-text">Раннее утро 16.01.1945 или 06.02.1945</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next chronology__next-btn"></div>
+      </div>
+
+      <p class="chronology__fact body-text-l">Августу Кекуле во сне приходит формула бензола в виде змея, кусающего собственный хвост</p>
     </section>
 
     <section class="chronology-description">
@@ -97,7 +129,7 @@
             <span class="chronology-description__fact-number title">1</span>
             <h3 class="chronology-description__fact-title body-text-bold">Реальные исторические события</h3>
           </div>
-          <p class="chronology-description__fact-text body-text chronology-description__fact-text_short">Реальные исторические
+          <p class="chronology-description__fact-text body-text">Реальные исторические
             события, которые либо упомянуты в романе, либо, хотя и не упомянуты, но имеют существенное значение для
             сюжета (например, день назначения А. Гитлера рейхсканцлером)</p>
           <button class="chronology-description__fact-btn body-text" type="button">читать дальше</button>
@@ -107,7 +139,7 @@
             <span class="chronology-description__fact-number title">2</span>
             <h3 class="chronology-description__fact-title body-text-bold">Романные события</h3>
           </div>
-          <p class="chronology-description__fact-text body-text chronology-description__fact-text_short">Они указаны либо точной
+          <p class="chronology-description__fact-text body-text">Они указаны либо точной
             датой (промежутком времени), когда текст романа позволяет ее (его) однозначно определить (например, события
             последней главы 1 части происходят в День подарков, то есть 26 декабря 1944 года), либо приблизительным
             промежутком времени. В последнем случае такая дата выделена курсивом, и ее погрешность составляет несколько
@@ -123,7 +155,7 @@
             <h3 class="chronology-description__fact-title body-text-bold">Христианские торжества и праздники в литургические годы 1944
               и 1945</h3>
           </div>
-          <p class="chronology-description__fact-text body-text chronology-description__fact-text_short">Так как их частое
+          <p class="chronology-description__fact-text body-text">Так как их частое
             упоминание в тексте и соотносимость романных событий с литургическим календарем не кажется случайным.<br>Для
             создания единой картины данные типы дат в таблице специально не выделяются</p>
           <button class="chronology-description__fact-btn body-text" type="button">читать дальше</button>
