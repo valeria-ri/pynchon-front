@@ -52,6 +52,7 @@
 .chronology__next-btn, .chronology__prev-btn {
   color: #1C1B1F;
   position: static;
+  margin: 0;
 }
 
 .chronology__prev-btn {
