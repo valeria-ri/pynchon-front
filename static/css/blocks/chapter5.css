@@ -156,3 +156,15 @@
 .chronology-description__fact-btn_visible {
   display: block;
 }
+
+@media screen and (max-width: 1024px) {
+  .chronology {
+    flex-direction: column;
+  }
+
+  /* .chronology__slider-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  } */
+}
