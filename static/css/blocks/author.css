@@ -2,6 +2,7 @@
 
 .pynchon-promo {
   height: calc(100vh - 83px);
+  max-height: 60vw;
   padding: 0 80px 61px;
   box-sizing: border-box;
   display: flex;
@@ -50,7 +51,7 @@
   justify-content: space-between;
 }
 
-.bio_type_youth, .bio_type_boeing, .bio_type_slider, .bio_type_california {
+.bio_type_youth, .bio_type_boeing, .bio_type_slider, .bio_type_california, .bio_type_facts {
   justify-content: flex-end;
 }
 
@@ -205,6 +206,34 @@
   object-fit: cover;
   margin-top: 48px;
   flex: 0 0 auto;
+}
+
+.bio__fact-item {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bio__fact-item_type_ad {
+  height: 210px;
+  margin-bottom: 16px;
+}
+
+.bio__fact-item_type_simpson-img {
+  height: 100%;
+  grid-column: 1/5;
+}
+
+.bio__fact-item_type_simpson-video {
+  height: 100%;
+}
+
+.bio__fact-grid {
+  display: grid;
+  grid-template-rows: 210px 66px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px 16px;
+  margin-top: 16px;
 }
 
 @media screen and (min-width: 1441px) {

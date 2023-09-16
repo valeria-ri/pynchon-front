@@ -8,7 +8,7 @@
   <meta name="keywords" content="Пинчон, Томас Пинчон, Радуга тяготения">
   <meta name="author" content="">
   <link rel="stylesheet" href="./static/css/index.css">
-  <script defer src="./static/js/index.js"></script>
+  <!-- <script defer src="./static/js/index.js"></script> -->
   <title>Пинчонвики</title>
 </head>
 
@@ -20,9 +20,12 @@
       <img class="header__logo" src="./static/img/logo.png" alt="лого">
     </a>
     <ul class="header__links">
-      <li class="header__item"><a class="header__link link body-text-l" href="author.html" target="_self">Томас Пинчон</a></li>
-      <li class="header__item"><a class="header__link link body-text-l" href="about-project.html" target="_self">О Проекте</a></li>
-      <li class="header__item"><a class="header__link link body-text-l" href="other-books.html" target="_self">Другие Книги</a></li>
+      <li class="header__item"><a class="header__link link body-text-l" href="author.html" target="_self">Томас
+          Пинчон</a></li>
+      <li class="header__item"><a class="header__link link body-text-l" href="about-project.html" target="_self">О
+          Проекте</a></li>
+      <li class="header__item"><a class="header__link link body-text-l" href="other-books.html" target="_self">Другие
+          Книги</a></li>
     </ul>
   </header>
 
@@ -81,26 +84,43 @@
       </ul>
       <h1 class="chapters-nav__title chapter-title">Персонажи</h1>
     </section>
+    <section class="characters">
+      <ul class="characters__list">
+        <li class="characters__item body-text">Семья</li>
+        <li class="characters__item body-text">Секс</li>
+        <li class="characters__item body-text">Дружба и помощь</li>
+        <li class="characters__item body-text">Дела и работа</li>
+        <li class="characters__item body-text">Потусторонние</li>
+        <li class="characters__item body-text">Двойники</li>
+        <li class="characters__item body-text">Уникальные</li>
+      </ul>
+    </section>
 
-    <!-- ТУТ БУДЕТ КАРТА ПЕРСОНАЖЕЙ -->
+    <section class="map">
+      <div class="map__box">
+        <object class="map__scheme" type="image/svg+xml" data="./static/img/map.svg"></object>
+      </div>
+    </section>
   </main>
+  <!-- <script>
+    const map = document.querySelector('.map__scheme');
+    let offsetX, offsetY;
 
-  <!-- компонент футера -->
-  <footer class="footer">
-    <div class="footer__container">
-      <p class="footer__copyright body-text">&copy;&nbsp;
-        <script>document.write(new Date().getFullYear())</script>
-      </p>
-      <a class="footer__link body-text" href="#">Телеграм канал</a>
-    </div>
-  </footer>
+    function move (e) {
+      map.style.left = `${e.clientX - offsetX}px`;
+      map.style.top = `${e.clientY - offsetY}px`;
+    };
 
-  <!-- компонент прокрутки страницы вверх -->
-  <div class="to-top">
-    <p class="to-top__text body-text">В начало</p>
-    <button class="to-top__button" type="button" id="scrollToTopLink"></button>
-  </div>
-  
+    map.addEventListener('mousedown', (e) => {
+      offsetX = e.clientX - map.offsetLeft;
+      offsetY = e.clientY - map.offsetTop;
+      document.addEventListener('mousemove', move);
+    });
+
+    document.addEventListener('mouseup', () => {
+      document.removeEventListener('mousemove', move);
+    })
+  </script> -->
 </body>
 
 </html>
