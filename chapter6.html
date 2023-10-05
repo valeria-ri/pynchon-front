@@ -8,6 +8,7 @@
   <meta name="keywords" content="Пинчон, Томас Пинчон, Радуга тяготения">
   <meta name="author" content="">
   <link rel="stylesheet" href="./static/css/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <!-- <script defer src="./static/js/index.js"></script> -->
   <title>Пинчонвики</title>
 </head>
@@ -27,6 +28,7 @@
       <li class="header__item"><a class="header__link link body-text-l" href="other-books.html" target="_self">Другие
           Книги</a></li>
     </ul>
+    <button class="header__button" type="button"></button>
   </header>
 
   <!-- контент страницы шестого раздела -->
@@ -97,30 +99,17 @@
     </section>
 
     <section class="map">
-      <div class="map__box">
-        <object class="map__scheme" type="image/svg+xml" data="./static/img/map.svg"></object>
-      </div>
+      <div class="map__box" id="map"></div>
     </section>
   </main>
-  <!-- <script>
-    const map = document.querySelector('.map__scheme');
-    let offsetX, offsetY;
+  <script>
+    const map = d3.select('#map');
 
-    function move (e) {
-      map.style.left = `${e.clientX - offsetX}px`;
-      map.style.top = `${e.clientY - offsetY}px`;
-    };
-
-    map.addEventListener('mousedown', (e) => {
-      offsetX = e.clientX - map.offsetLeft;
-      offsetY = e.clientY - map.offsetTop;
-      document.addEventListener('mousemove', move);
-    });
-
-    document.addEventListener('mouseup', () => {
-      document.removeEventListener('mousemove', move);
+    d3.svg('./static/svg/map.svg').then((data) => {
+      const importedNode = document.importNode(data.documentElement, true);
+      map.node().appendChild(importedNode);
     })
-  </script> -->
+  </script>
 </body>
 
 </html>

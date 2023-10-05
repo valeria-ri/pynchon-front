@@ -1,6 +1,7 @@
 // Настройка слайдера дат
 
 const swiper = new Swiper('.swiper', {
+  mousewheel: true,
   slidesPerView: 3,
   spaceBetween: 18,
   centeredSlides: true,
@@ -12,13 +13,8 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
-  breakpoints: {
-    1024: {
-      spaceBetween: 14,
-      // direction: 'horizontal',
-    }
-  }
 })
+
 
 const slides = document.querySelectorAll('.chronology__slide-text');
 

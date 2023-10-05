@@ -64,7 +64,7 @@
 }
 
 .chronology__fact {
-  max-width: 560px;
+  width: 560px;
   color: #151515;
   margin: 0;
   padding: 0;
@@ -157,14 +157,73 @@
   display: block;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1079px) {
   .chronology {
     flex-direction: column;
+    gap: 24px;
   }
 
-  /* .chronology__slider-container {
-    flex-direction: row;
-    align-items: center;
-    gap: 14px;
+  /* .chronology__slide {
+    margin-bottom: 14px;
+  }
+
+  .chronology__slide .chronology__slide-text {
+    font-size: 0.875rem;
+  }
+
+  .chronology__slide_active .chronology__slide-text {
+    font-size: 1.875rem;
   } */
+
+  .chronology__fact {
+    text-align: center;
+    width: 100%;
+    max-width: 560px;
+    color: #151515;
+    margin: 0;
+    padding: 0;
+  }
+
+  .chronology-description {
+    width: 100%;
+    max-width: 560px;
+    padding: 0 0 40px;
+  }
+
+  .chronology-description__facts {
+    width: 100%;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .chronology-description__fact {
+    width: 100%;
+  }
+}
+
+.help_text {
+  margin-top: -25px;
+  margin-left: 10px;
+}
+
+.table_characters_chronology {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #F3F0EA;
+}
+
+.table_characters_chronology__row {
+  border-bottom: 1px solid #c7c3c3;
+  border-top: 1px solid #c7c3c3;
+}
+
+.table_characters_chronology__cell {
+  border-right: 1px solid #c7c3c3;
+  border-left: 1px solid #c7c3c3;
+  border-bottom: 1px solid #c7c3c3;
+  padding: 8px;
+}
+
+.table_characters_chronology__text {
+  text-align: center;
 }

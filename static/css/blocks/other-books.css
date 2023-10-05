@@ -70,6 +70,7 @@
   font-weight: 400;
   line-height: 140%;
   padding: 10px 30px 10px 10px;
+  box-sizing: border-box;
   margin: 0;
   border-radius: 40px;
   border: 1px solid #151515;
