@@ -16,11 +16,12 @@
 .chapter-2-3-notes__content {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .sidebar {
   width: 100%;
-  max-width: 540px;
+  max-width: 493px;
   height: min-content;
   background-color: #151515;
   padding: 40px;
@@ -147,4 +148,55 @@
   height: 260px;
   object-fit: contain;
   object-position: 0;
+}
+
+.modal-image {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-body {
+  background-color: rgba(0, 0, 0, 0.9);
+  max-width: 100%;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+}
+
+.chapter-3-image {
+  position: relative;
+}
+
+.img-chapter {
+  width: 100%;
+}
+
+.img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  background-color: #F3F0EA;
+  color: #000;
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1199px) {
+  .sidebar {
+    max-width: 400px;
+  }
 }
