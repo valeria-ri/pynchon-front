@@ -52,6 +52,7 @@
 .about-project__content {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .meeting {
@@ -118,6 +119,14 @@
   font-size: 0;
 }
 
+#plannedMeetingsContainer {
+  display: block;
+}
+
+#pastMeetingsContainer {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .about-nav {
     padding: 10px 16px 40px;
@@ -131,5 +140,38 @@
   .about-nav__link {
     padding: 13px 10px;
     box-sizing: border-box;
+  }
+
+  .about-project {
+    padding: 0 16px 70px;
+  }
+
+  .about-project__content {
+    flex-direction: column;
+  }
+
+  .about-project__description {
+    margin-bottom: 24px;
+  }
+
+  .meeting {
+    width: 100%;
+    max-width: none;
+    padding: 24px 0 40px;
+    box-sizing: border-box;
+    /* стилизация для меню */
+    display: none;
+  }
+
+  .meeting__topic {
+    text-align: center;
+    font-style: normal;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 120%;
+  }
+
+  .meeting__date {
+    text-align: center;
   }
 }

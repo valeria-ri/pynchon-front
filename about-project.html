@@ -27,6 +27,7 @@
         <li class="header__item"><a class="header__link link body-text-l" href="about-project.html" target="_self">О Проекте</a></li>
         <li class="header__item"><a class="header__link link body-text-l" href="other-books.html" target="_self">Другие Книги</a></li>
       </ul>
+      <button class="header__book" type="button"></button>
       <button class="header__button" type="button"></button>
     </header>
 
@@ -67,7 +68,7 @@
               </button>
               <div id="noteNav-1" class="accordion-collapse collapse">
                 <ul class="accordion-body">
-                  <li><a class="sidebar__link body-text sidebar__link_active" href="#">Тема встречи / 21.04.2023</a></li>
+                  <li><a class="sidebar__link body-text sidebar__link_active" href="#1">Тема встречи / 21.04.2023</a></li>
                   <li><a class="sidebar__link body-text" href="#">Тема встречи / 21.04.2023</a></li>
                   <li><a class="sidebar__link body-text" href="#">Тема встречи / 21.04.2023</a></li>
                 </ul>
@@ -83,7 +84,7 @@
               </button>
               <div id="noteNav-2" class="accordion-collapse collapse">
                 <ul class="accordion-body">
-                  <li><a class="sidebar__link body-text" href="#">Тема встречи / 21.04.2023</a></li>
+                  <li><a class="sidebar__link body-text" href="#1">Тема встречи / 21.04.2023</a></li>
                   <li><a class="sidebar__link body-text" href="#">Тема встречи / 21.04.2023</a></li>
                   <li><a class="sidebar__link body-text" href="#">Тема встречи / 21.04.2023</a></li>
                 </ul>
@@ -91,7 +92,7 @@
             </div>
           </div>
 
-          <div class="meeting">
+          <div class="meeting" id="1">
             <div class="meeting__header">
               <h2 class="meeting__topic title-bold">Тема встречи</h2>
               <p class="meeting__date body-text">21.04.2023</p>
@@ -138,6 +139,66 @@
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('.sidebar__link');
+        const blocks = document.querySelectorAll('.meeting');
+        const nav = document.querySelector('.about-nav');
+        const sidebar = document.querySelector('.sidebar');
+        const text = document.querySelector('.about-project__description');
+        const bookBtn = document.querySelector('.header__book');
+  
+        const isMobileScreen = () => {
+          return window.innerWidth <= 768;
+        };
+  
+        links.forEach(link => {
+          link.addEventListener('click', (event) => {
+            if (!isMobileScreen()) return;
+  
+            event.preventDefault();
+  
+            const targetId = event.target.getAttribute('href').substring(1);  // Get the target block ID
+            const targetBlock = document.getElementById(targetId);
+  
+            if (targetBlock) {
+              blocks.forEach(block => {
+                block.style.display = 'none';
+              });
+  
+              targetBlock.style.display = 'flex';
+            }
+  
+            sidebar.style.display = 'none';
+            nav.style.display = 'none';
+            text.style.display = 'none';
+          });
+        });
+  
+        bookBtn.addEventListener('click', () => {
+          sidebar.style.display = 'flex';
+          nav.style.display = 'flex';
+          text.style.display = 'block';
+          blocks.forEach(block => {
+            block.style.display = 'none';
+          });
+        })
+  
+        window.addEventListener('resize', () => {
+          if (!isMobileScreen()) {
+            blocks.forEach(block => {
+              block.style.display = 'flex';
+            });
+          } else {
+            blocks.forEach(block => {
+              block.style.display = 'none';
+            });
+          }
+        });
+      });
+  
+    </script>
     
   </body>
 </html>

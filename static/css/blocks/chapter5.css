@@ -184,6 +184,11 @@
   text-align: center;
 }
 
+.chronology-description__subtitle a {
+  color: #1c1b1f;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1079px) {
   .chronology {
     flex-direction: column;
@@ -191,17 +196,25 @@
     padding: 0 16px 100px;
   }
 
-  /* .chronology__slide {
-    margin-bottom: 14px;
+  .chronology__slider {
+    width: 350px;
   }
 
+  /* .chronology__slide {
+    margin-bottom: 14px;
+  } */
+
   .chronology__slide .chronology__slide-text {
-    font-size: 0.875rem;
+    font-size: 1.5rem;
   }
 
   .chronology__slide_active .chronology__slide-text {
-    font-size: 1.875rem;
-  } */
+    font-size: 3rem;
+  }
+
+  .chronology__slide_active .chronology__slide_s.chronology__slide-text {
+    font-size: 1.5rem;
+  }
 
   .chronology__fact {
     text-align: center;

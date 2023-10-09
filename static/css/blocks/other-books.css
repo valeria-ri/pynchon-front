@@ -148,3 +148,23 @@
 .covers-popup__pagination .swiper-pagination-bullet-active {
   background: #842234;
 }
+
+@media screen and (max-width: 768px) {
+  .other-books {
+    padding: 24px 16px 40px;
+  }
+
+  .other-books__content {
+    flex-direction: column;
+  }
+
+  .other-books__sidebar {
+    width: 100%;
+    max-width: none;
+  }
+
+  .other-books__description {
+    width: 100%;
+    max-width: none;
+  }
+}

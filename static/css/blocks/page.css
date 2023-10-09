@@ -2,6 +2,10 @@ html {
   font-size: 16px;
 }
 
+a {
+  color: inherit;
+}
+
 .page {
   min-height: 100vh;
   display: flex;
@@ -361,7 +365,7 @@ html {
 }
 
 @media screen and (max-width: 1439px) {
-  .tentacle_type_chapter {
+  .tentacle_type_chapter, .tentacle_type_about {
     display: none;
   }
 }
